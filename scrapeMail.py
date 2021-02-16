@@ -123,4 +123,4 @@ os.system("firebase deploy")
 
 os.system("git add .")
 os.system('git commit -m "' + subject + '"')
-# os.system("git push")
+os.system("git push")
