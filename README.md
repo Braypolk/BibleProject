@@ -13,4 +13,4 @@ New emails are retrieved with python function
   - body of content is then stripped and styled accordingly
   - a new file is created with slug of subject and content body
   - `index.html` is updated with newly created file
-  - once complete it will run `firebase deploy`
+  - once complete it will deploy to firebase and push changes to github

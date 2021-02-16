@@ -117,4 +117,10 @@ for i in range(messages-N, messages-M, -1):
 imap.close()
 imap.logout()
 
+# Must alreday be singed into firebase and git
+os.chdir('/media/bray/Mass Storage/Coding Projects/BibleProject')
 os.system("firebase deploy")
+
+os.system("git add .")
+os.system('git commit -m "this is a test"')
+# os.system("git push")
