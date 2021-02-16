@@ -122,5 +122,5 @@ os.chdir('/media/bray/Mass Storage/Coding Projects/BibleProject')
 os.system("firebase deploy")
 
 os.system("git add .")
-os.system('git commit -m "this is a test"')
+os.system('git commit -m "' + subject + '"')
 # os.system("git push")
