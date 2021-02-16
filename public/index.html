@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    
+        
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #192f57;
+            width: 100vw;
+        }
+
+        .outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .inner { 
+            display: flex;           
+            flex: 50%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            
+        }
+
+        #header{
+            display: block;
+            font-size: 80px;
+            color: white;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #header:hover { color: #d16e30;}
+
+        a {
+            padding: 20px;
+            font-size: 50px;
+            text-decoration: none;
+            color: white;
+        }
+        a:visited {color: white;}
+        a:hover { color: #d16e30;}
+
+        #wide{
+            width: 100vw;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #header{
+                top: 30px;
+                font-size: 30px;
+            }
+            a{
+                padding: 13px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wide"><a id="header" href="https://bibleproject.com/">The Bible Project</a></div>
+    <div class="outer">
+        <div class="inner">
+            <a href="/week-17.html">Week 17</a>
+            <a href="/week-15.html">Week 15</a>
+            <a href="/week-12.html">Week 12</a>
+            <a href="/week-12.html">Week 12</a>
+            <!-- endOfWeeks -->
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.22.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js?useEmulator=true"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                let app = firebase.app();
+            } catch (e) {
+                console.error(e);
+                document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+            }
+        });
+    </script>
+</body>
+
+</html>
