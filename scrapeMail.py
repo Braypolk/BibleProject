@@ -1,7 +1,6 @@
 from urllib import response
 
 import imaplib, email, os
-from email.header import decode_header
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -35,11 +34,6 @@ for i in range(messages-N, messages-M, -1):
         if isinstance(response, tuple):
             # parse a bytes email into a message object
             msg = email.message_from_bytes(response[1])
-            # decode the email subject
-            # subject, encoding = decode_header(msg["Subject"])[0]
-            # if isinstance(subject, bytes):
-                # if it's a bytes, decode to str
-                # subject = subject.decode(encoding)
             subject = msg["Subject"]
             print(subject)
             subject = subject[subject.find("Week "):subject.find("Week ") +7].rstrip()
@@ -122,3 +116,5 @@ for i in range(messages-N, messages-M, -1):
 # close the connection and logout
 imap.close()
 imap.logout()
+
+os.system("firebase deploy")
