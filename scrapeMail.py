@@ -18,17 +18,22 @@ imap = imaplib.IMAP4_SSL('imap.gmail.com')
 imap.login(username, password)
 status, messages = imap.select('"Bible_Project"')
 
-messages = int(messages[0])
-
+num_of_messages = int(messages[0])
+print(num_of_messages)
 # N is start M is stop
 
 # gets the latest email
-N = messages-1 # start 1
-M = messages   # stop 0
+N = num_of_messages-1 # start 1
+M = num_of_messages   # stop 0
+
+single = True
 
 success = False
-for i in range(messages-N, messages-M, -1):
-    res, msg = imap.fetch(str(i), "(RFC822)")
+for i in range(num_of_messages-N, num_of_messages-M, -1):
+    if single:
+        res, msg = imap.fetch(messages[0], "(RFC822)")
+    else:
+        res, msg = imap.fetch(str(i), "(RFC822)")
     success = False
     for response in msg:
         if isinstance(response, tuple):
