@@ -8,7 +8,8 @@ New emails are retrieved with python function
   - folder in gmail called `Bible_Project` must be present
   - this folder filters all emails sent from `support@jointhebibleproject.com`
   - username and password for gmail account are loaded from `.env` file
-  - change `N` and `M` variables to retrieve differing amounts of emails (example: singe email or bulk)
+  - change `N` and `M` variables to retrieve differing amounts of emails 
+  - if only getting most recent email, set `single` to `True`
   - retrives subject of email and strips out coresponding week. This is later used to create html file name
   - body of content is then stripped and styled accordingly
   - a new file is created with slug of subject and content body
