@@ -2,12 +2,12 @@ from urllib import response
 
 import imaplib, email, os
 from dotenv import load_dotenv
+from sys import platform
 
 load_dotenv()
 
-username = os.getenv('username')
-password = os.getenv('password')
-
+username = os.getenv('gmailUSERNAME')
+password = os.getenv('gmailPASSWORD')
 
 def clean(text):
     # clean text for creating a folder
@@ -115,7 +115,7 @@ for i in range(num_of_messages-N, num_of_messages-M, -1):
             print("written temp")
 
     if success:
-        os.rename('public/index.html.tmp', 'public/index.html')
+        os.replace('public/index.html.tmp', 'public/index.html')
     print("re-write complete")
 
 # close the connection and logout
@@ -123,7 +123,11 @@ imap.close()
 imap.logout()
 
 # Must alreday be singed into firebase and git
-os.chdir('/media/bray/Mass Storage/Coding Projects/BibleProject')
+if platform == 'win32':
+    os.chdir('b:\\Coding Projects\\BibleProject')
+else:
+    os.chdir('/media/bray/Mass Storage/Coding Projects/BibleProject')
+print(os.getcwd())
 os.system("firebase deploy")
 
 os.system("git add .")

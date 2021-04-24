@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
     <link rel="manifest" href="./manifest.webmanifest">
-    
-        
+
+
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
-
+        
         body {
             background-color: #192f57;
             width: 100%;
             height: 100%;
         }
-
+        
         .outer {
             display: flex;
             justify-content: center;
@@ -28,45 +28,52 @@
             width: 100%;
             height: 100%;
         }
-
-        .inner { 
-            display: flex;           
+        
+        .inner {
+            display: flex;
             flex: 50%;
             flex-direction: column;
             flex-wrap: wrap;
             align-items: center;
-            
         }
-
-        #header{
+        
+        #header {
             display: block;
             font-size: 80px;
             color: white;
             margin: 0 auto;
             text-align: center;
         }
-
-        #header:hover { color: #d16e30;}
-
+        
+        #header:hover {
+            color: #d16e30;
+        }
+        
         a {
             padding: 20px;
             font-size: 50px;
             text-decoration: none;
             color: white;
         }
-        a:visited {color: white;}
-        a:hover { color: #d16e30;}
-
-        #wide{
+        
+        a:visited {
+            color: white;
+        }
+        
+        a:hover {
+            color: #d16e30;
+        }
+        
+        #wide {
             width: 100vw;
         }
-
+        
         @media only screen and (max-width: 600px) {
-            #header{
+            #header {
                 top: 30px;
                 font-size: 30px;
             }
-            a{
+            a {
                 padding: 13px;
                 font-size: 22px;
             }
@@ -109,6 +116,7 @@
             <a href="/week-27.html">Week 27</a>
             <a href="/week-28.html">Week 28</a>
             <a href="/week-29.html">Week 29</a>
+            <a href="/week-30.html">Week 30</a>
             <!-- endOfWeeks -->
         </div>
     </div>
@@ -121,7 +129,7 @@
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js?useEmulator=true"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             try {
                 let app = firebase.app();
             } catch (e) {
